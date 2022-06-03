@@ -45,8 +45,8 @@ jobs:
 
       - name: Docker build and Push
         run: |
-            docker build . -t san0802containerregi08.azurecr.io/dockerimag:latest
-            docker push  san0802containerregi08.azurecr.io/dockerimag:latest
+            docker build . -t sanchiingalecontainerregi08.azurecr.io/dockerimag:latest
+            docker push  sanchiingalecontainerregi08.azurecr.io/dockerimag:latest
 #       - name: Azure login
 #         run: |
 #             az login -u sanchisudarshaningale02@gmail.com -p sanchiingale08
