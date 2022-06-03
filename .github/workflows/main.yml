@@ -36,6 +36,17 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+      - name: ACR login
+        uses: azure/docker-login@v1
+        with:
+          login-server: san0802containerregi08.azurecr.io
+          username: san0802containerregi08
+          password: PR+Sm+8cGTVyE1Gnl6CHlfX1P6lFxvWP
+
+      - name: Docker build and Push
+        run: |
+            docker build . -t san0802containerregi08.azurecr.io/dockerimag:latest
+            docker push  san0802containerregi08.azurecr.io/dockerimag:latest
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
