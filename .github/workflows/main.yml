@@ -39,9 +39,9 @@ jobs:
       - name: ACR login
         uses: azure/docker-login@v1
         with:
-          login-server: san0802containerregi08.azurecr.io
-          username: san0802containerregi08
-          password: PR+Sm+8cGTVyE1Gnl6CHlfX1P6lFxvWP
+          login-server: sanchiingalecontainerregi08.azurecr.io
+          username: sanchiingalecontainerregi08
+          password: l=mhAOkJK50inJAsy49VWS1a5e7w5ett
 
       - name: Docker build and Push
         run: |
