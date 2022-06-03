@@ -47,6 +47,14 @@ jobs:
         run: |
             docker build . -t san0802containerregi08.azurecr.io/dockerimag:latest
             docker push  san0802containerregi08.azurecr.io/dockerimag:latest
+      - name: Azure login
+        run: |
+            az login -u sanchisudarshaningale02@gmail.com -p sanchiingale08
+      - uses: azure/webapps-deploy@v2
+        with:
+           app-name: 'sanchiin02'
+           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+           images: 'san0802containerregi08.azurecr.io/dockerimag:latest'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
