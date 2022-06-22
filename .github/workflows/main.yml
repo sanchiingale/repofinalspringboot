@@ -41,7 +41,7 @@ jobs:
         with:
           login-server: sanchiingalecontainerregi08.azurecr.io
           username: sanchiingalecontainerregi08
-          password: lN3A9kDV5ZZujZsZQ1QN3du5nL3/3rOTv
+          password: u3OaYcfZ8FWI7t+4mFeXAt83g366e6b2
 
       - name: Docker build and Push
         run: |
